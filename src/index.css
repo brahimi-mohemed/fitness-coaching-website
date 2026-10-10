@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #A3E635;
+    --primary-color-hover: #84CC16;
+    --primary-color-active: #65A30D;
+
+    --background-color1: #F7F7F5;
+    --background-color2: #FAFAFA;
+    --background-color3: #FFFFFF;
+    --section-padding: clamp(20px, 12vw, 120px);
+    --main-txt: #111111;
+    --muted-txt: #6B7280;
+    --main-font: "Sora", sans-serif;
+    --secondary-font: "Inter", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: auto;
+    scrollbar-color: var(--primary-color) var(--background-color3);}
+
+body {
+    color: var(--main-txt);
+    background-color: var(--background-color3);
+}
+
+a {
+    text-decoration: none;
+}
+
+p{
+    line-height: 1.5em;
+    letter-spacing: 5%;
+}
+
+button,
+button *,
+[role="button"],
+[role="button"] *,
+img {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+img {
+    -webkit-user-drag: none;
+}
+
+
+#scrollProgressBar{
+    height : 7px;
+    top : 0;
+    position: fixed;
+    width : var(--progressWidth);
+    --progressWidth : 0%; 
+    background-color: var(--primary-color);
+}
+
+
+::selection{
+    background-color: hsla(90, 89%, 44%, 0.4);
+}

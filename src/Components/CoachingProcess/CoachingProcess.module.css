@@ -1,0 +1,143 @@
+.section {
+  padding: var(--section-padding) 0;
+  background-color: var(--background-color1);
+}
+
+.section > h3,
+.section > h2,
+.section > p {
+  width: 90%;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.section > h3 {
+  color: var(--primary-color-hover);
+  font-family: var(--main-font);
+  font-size: clamp(14px, 2.1vw, 24px);
+  font-weight: normal;
+}
+
+.section > h2 {
+  margin-bottom: 2.5vw;
+  color: var(--main-txt);
+  font-family: var(--main-font);
+  font-size: clamp(18px, 3.2vw, 48px);
+}
+
+.section > p {
+  color: var(--main-txt);
+  font-family: var(--secondary-font);
+  font-size: clamp(14px, 1.6vw, 22px);
+}
+
+.timeline {
+  position: relative;
+  display: grid;
+  width: 95%;
+  max-width: 1300px;
+  margin: clamp(25px, 4vw, 60px) auto 0;
+  padding: 0;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 3.2vw;
+  list-style: none;
+}
+
+.timeline::before {
+  position: absolute;
+  top: 27px;
+  right: calc(25% - 58px);
+  left: 28px;
+  height: 2px;
+  background-color: var(--main-txt);
+  content: '';
+  opacity: 0.45;
+}
+
+.step {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.number {
+  z-index: 1;
+  display: flex;
+  width: 3em;
+  aspect-ratio: 1;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: var(--main-font);
+  font-family: var(--main-font);
+  font-size: clamp(16px, 1.5vw, 20px);
+}
+
+.stepContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stepContent h3 {
+  height: 1.5lh;
+  color: var(--main-txt);
+  font-family: var(--main-font);
+  font-size: clamp(18px, 2.4vw, 24px);
+  font-weight: bold
+}
+
+.stepContent p {
+  color: var(--main-txt);
+  font-family: var(--secondary-font);
+  font-size: clamp(14px, 1.5vw, 18px);
+}
+
+@media (max-width: 750px) {
+  .timeline {
+    display: flex;
+    margin-top: 40px;
+    width: 85%;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .timeline::before {
+    content: none;
+  }
+
+  .step {
+    display: grid;
+    grid-template-columns: 56px minmax(0, 1fr);
+    align-items: start;
+    gap: 16px;
+    padding-bottom: 40px;
+  }
+
+  .step:last-child {
+    padding-bottom: 0;
+  }
+
+  .step:not(:last-child)::after {
+    position: absolute;
+    top: 56px;
+    bottom: 0;
+    left: 28px;
+    width: 2px;
+    background-color: var(--main-txt);
+    content: '';
+    opacity: 0.45;
+  }
+
+  .stepContent {
+    padding-top: 10px;
+  }
+
+  .stepContent h3 {
+    min-height: 0;
+  }
+}

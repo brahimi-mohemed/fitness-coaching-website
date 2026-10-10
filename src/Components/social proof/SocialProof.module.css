@@ -1,0 +1,28 @@
+.section {
+    min-height: clamp(20px, 8vw, 80px);
+    padding: 8px 5%;
+    box-sizing: border-box;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 16px;
+}
+
+.value {
+    display: flex;
+    align-items: center;
+    gap: 1.2vw;
+    font-size: clamp(10px, 1.6vw, 22px);
+    font-weight: bold;
+}
+
+.value span {
+    color: var(--main-txt);
+    font-family: var(--main-font);
+}
+
+.value img {
+    height: 1.7em;
+    flex-shrink: 0;
+}

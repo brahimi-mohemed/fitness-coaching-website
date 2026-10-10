@@ -1,0 +1,210 @@
+.header {
+    width: 100%;
+    height: 70px;
+    position: sticky;
+    top: 20px;
+    z-index: 100;
+}
+
+.nav {
+    margin: auto;
+    width: 95%;
+    max-width: 1350px;
+    height: 100%;
+    border-radius: 50px;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: hsla(60, 11%, 96%, 0.65);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 5px 15px 8px hsla(0, 0%, 50%, 0.2);
+    animation: anime 0.5s ease forwards;
+}
+
+@keyframes anime {
+    from {
+        opacity: 0;
+        transform: translate(0%, -40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0%, 0);
+    }
+}
+
+.logo {
+    color: var(--main-txt);
+    font-weight: bold;
+    font-family: Verdana, sans-serif;
+    cursor: pointer;
+    font-size: clamp(16px, 1.7vw, 24px);
+    transition: 0.2s ease;
+}
+
+.logo:hover {
+    color: var(--primary-color);
+}
+
+.logo:active {
+    color: var(--primary-color-hover);
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+
+.links a {
+    font-size: clamp(12px, 1.5vw, 18px);
+    font-family: var(--main-font);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.5em;
+    color: var(--main-txt);
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.links a:hover {
+    color: var(--primary-color-hover);
+    text-decoration: underline;
+    transform: translateY(-4px);
+}
+
+.links a:active {
+    color: var(--primary-color);
+    transform: translateY(-1px);
+}
+
+.CTAbtn {
+    -webkit-user-select: none;
+    user-select: none;
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--main-txt);
+    border: none;
+    border-radius: 20px;
+    padding: 1em 2em;
+    font-size: clamp(10px, 1.2vw, 14px);
+    font-family: var(--main-font);
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.CTAbtn:hover,
+.CTA:hover {
+    background-color: var(--primary-color-hover);
+    transform: translateY(-2px);
+}
+
+.CTAbtn:active,
+.CTA:active {
+    background-color: var(--primary-color-active);
+    transform: scale(97%);
+}
+
+.mobileMenuBtn {
+    background-color: transparent;
+    display: none;
+    color: var(--main-txt);
+    border: none;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin-right: 15px;
+    transition: 0.2s ease;
+}
+
+.mobileMenuBtn:active {
+    opacity: 0.8;
+    transform: scale(0.98);
+}
+
+.mobileMenu {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    transform: translateY(-100%);
+    background-color: var(--background-color1);
+    opacity: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 6vw;
+    transition: 0.3s ease-in-out;
+    z-index: 200;
+}
+
+.mobileMenu.open {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.closeMenuBtn {
+    padding: 50px 55px 0 0;
+    align-self: end;
+    margin-bottom: 15vw;
+    background-color: transparent;
+    color: var(--main-txt);
+    border: none;
+    cursor: pointer;
+}
+
+.mobileMenu a:not(:last-child) {
+    color: var(--main-txt);
+    font-family: var(--main-font);
+    font-size: clamp(14px, 8vw, 22px);
+    width: fit-content;
+}
+
+.CTA {
+    -webkit-user-select: none;
+    user-select: none;
+    display: inline-block;
+    text-align: center;
+    border-radius: 15px;
+
+    padding: 0.8em 2em;
+    margin: auto;
+    border: none;
+
+    font-weight: bold;
+    font-family: var(--main-font);
+    font-size: clamp(16px, 1.6vw, 20px);
+
+
+    background-color: var(--primary-color);
+    color: var(--main-txt);
+    text-decoration: none;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+@media (max-width: 750px) {
+    .CTAbtn,
+    .links {
+        display: none;
+    }
+
+    .mobileMenuBtn {
+        display: block;
+    }
+
+    .mobileMenu {
+        display: flex;
+    }
+}
+
+@media (max-width: 500px) {
+    .header {
+        height: 50px;
+    }
+}

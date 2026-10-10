@@ -1,0 +1,82 @@
+.section {
+    padding: var(--section-padding) 0;
+    background-color: var(--background-color3);
+    text-align: center;
+}
+
+.section > h3 {
+    font-size: clamp(14px, 2.1vw, 24px);
+    font-family: var(--main-font);
+    font-weight: normal;
+    color: var(--primary-color-hover);
+}
+
+.section > h2 {
+    color: var(--main-txt);
+    font-family: var(--main-font);
+    font-size: clamp(18px, 3.2vw, 48px);
+    max-width: 900px;
+    margin: 0 auto 2.5vw;
+}
+
+.section > p {
+    color: var(--main-txt);
+    font-family: var(--secondary-font);
+    font-size: clamp(14px, 1.6vw, 22px);
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3vw;
+    margin: clamp(25px, 4vw, 60px) auto 0;
+    width: 90%;
+    max-width: 1250px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    padding: clamp(10px, 8vw, 40px) 8px;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 0 20px 5px hsla(0, 0%, 0%, 0.1);
+    transition: 0.2s ease;
+}
+
+.card img {
+    width: 25%;
+    aspect-ratio: 1 / 1;
+    margin-bottom: 2vw;
+    transition: 0.2s ease;
+    margin-bottom: 3vw;
+}
+
+.card h4 {
+    color: var(--main-txt);
+    font-family: var(--main-font);
+    font-size: clamp(20px, 2vw, 30px);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2vw;
+}
+
+.card p {
+    color: var(--main-txt);
+    font-family: var(--secondary-font);
+    font-size: clamp(12px, 1.5vw, 18px);
+    max-width: 90%;
+}
+
+@media (max-width: 850px) {
+    .grid {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+        width: 80%;
+        gap: 6vw;
+    }
+}

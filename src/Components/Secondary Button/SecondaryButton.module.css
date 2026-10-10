@@ -1,0 +1,30 @@
+.secondaryButton {
+    -webkit-user-select: none;
+    user-select: none;
+    display: inline-block;
+    background-color: transparent;
+    color: var(--primary-color-hover);
+    border: 3px solid var(--primary-color);
+    border-radius: 15px;
+    padding: 1em 2.2em;
+    font-size: clamp(12px, 1.4vw, 18px);
+    font-family: var(--main-font);
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.secondaryButton:hover {
+    background-color: var(--primary-color);
+    color: var(--main-txt);
+    transform: translateY(-2px);
+}
+
+.secondaryButton:active {
+    background-color: var(--primary-color-active);
+    border-color: var(--primary-color-active);
+    color: var(--main-txt);
+    transform: scale(97%);
+}

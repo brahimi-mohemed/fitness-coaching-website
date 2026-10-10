@@ -1,0 +1,112 @@
+.section {
+    padding: var(--section-padding) 0;
+    text-align: center;
+    background-color: var(--background-color1);
+}
+
+.section > h3 {
+    font-size: clamp(16px, 2.1vw, 24px);
+    font-family: var(--main-font);
+    font-weight: normal;
+    color: var(--primary-color-hover);
+}
+
+.section > h2 {
+    color: var(--main-txt);
+    font-family: var(--main-font);
+    font-size: clamp(20px, 3.2vw, 48px);
+    max-width: 900px;
+    margin: 0 auto 2.5vw;
+}
+
+.section > p {
+    color: var(--main-txt);
+    font-family: var(--secondary-font);
+    font-size: clamp(14px, 1.6vw, 22px);
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 4vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    padding: clamp(20px, 4vw, 80px) 4vw;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-content: center;
+    border: solid var(--primary-color);
+    border-width: 3px 0;
+}
+
+.item:nth-of-type(2) {
+    grid-template-columns: 50% 50%;
+    border: none;
+}
+
+.image {
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    object-fit: cover;
+    box-shadow: 0 0 20px 12px hsla(0, 0%, 0%, 0.1);
+    border-radius: 8px;
+    transition: 0.2s ease;
+}
+
+.copy {
+    text-align: start;
+    align-content: center;
+    width: 95%;
+    margin: auto;
+}
+
+.copy h3 {
+    color: var(--main-txt);
+    font-family: var(--main-font);
+    font-size: clamp(18px, 3vw, 35px);
+    margin-bottom: 1.5vw;
+}
+
+.copy p {
+    color: var(--muted-txt);
+    font-family: var(--secondary-font);
+    font-size: clamp(14px, 1.7vw, 22px);
+}
+
+.section h4{
+    color: var(--main-txt);
+    font-family: var(--main-font);
+    font-size: clamp(18px, 2.8vw, 36px);
+    margin-top: clamp(20px, 6vw, 60px);
+    margin-bottom: 2.5vw;
+}
+
+
+@media (max-width: 600px) {
+    .item,
+    .item:nth-of-type(2) {
+        grid-template-columns: 1fr;
+        gap: 8vw;
+        width: 100%;
+        margin: auto;
+        padding: 12vw 0;
+    }
+    .container{
+        width: 95%;
+    }
+    .image {
+        width: 90%;
+    }
+
+    .item:not(:nth-of-type(2)) .image {
+        order: 1;
+    }
+}

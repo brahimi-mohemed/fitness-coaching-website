@@ -1,0 +1,77 @@
+.footer {
+    background-color: var(--background-color);
+    padding-bottom: 0;
+}
+
+.footerContent {
+    display: grid;
+    padding: clamp(10px, 7vw, 60px) 0;
+    grid-template-columns: 1.6fr 1fr 1fr;
+    gap: 2.5vw;
+}
+
+.footerContent div {
+    display: flex;
+    flex-direction: column;
+    padding-left: 4vw;
+    gap: 1.2vw;
+}
+
+.footerContent h3 {
+    color: var(--main-txt);
+    font-family: var(--main-font);
+    font-size: clamp(18px, 2.6vw, 36px);
+}
+
+.footerContent h4 {
+    color: var(--main-txt);
+    font-size: clamp(10px, 1.8vw, 20px);
+    font-weight: normal;
+    font-family: var(--secondary-font);
+}
+
+.footerContent a ,
+.footerContent p{
+    font-size: clamp(10px, 1.6vw, 18px);
+    text-decoration: none;
+    color: var(--main-txt);
+    font-family: var(--secondary-font);
+    cursor: pointer;
+    width: fit-content;
+    transition: 0.2s ease;
+}
+.footerContent a:hover {
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.footerContent a:active {
+    color: var(--primary-color-active);
+    transform: translateY(1px);
+}
+
+.footerRights {
+    border-top: 2px solid var(--muted-txt);
+    padding: clamp(5px, 4vw, 30px) 0;
+}
+
+.footerRights p {
+    text-align: center;
+    color: var(--muted-txt);
+    font-family: var(--secondary-font);
+    font-size: clamp(10px, 1.8vw, 18px);
+}
+
+@media (max-width: 750px) {
+    .footerContent {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .footerContent {
+        grid-template-columns: 1fr;
+        max-width: 85%;
+        gap: 5vw;
+    }
+}
