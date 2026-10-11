@@ -1,5 +1,5 @@
 import styles from './WhoIHelp.module.css'
-import compass from './Compass.svg'
+import compass from './compass.svg'
 import briefcase from './case.svg'
 import reset from './reset.svg'
 
